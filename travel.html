@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>hotel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newstyles.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header" id="navigation-menu">
+    <div class="container">
+<nav>
+<a href="#" class=""logo><img src="https://images.contentstack.io/v3/assets/bltc6ce635bc4868eb2/blt778375ced579c397/64ac6f3ea80c2537e7c8ead8/logo-mgm-rewards-inverted.svg"</a>
+
+<ul class="nav-menu">
+<li><a href="#home" class="nav-link">Home</a></li>
+<li><a href="#about" class="nav-link">About</a></li>
+<li><a href="#rooms" class="nav-link">Rooms</a></li>
+<li><a href="#restraunts" class="nav-link">Restraunts</a></li>
+<li><a href="#Gallery" class="nav-link">Gallery</a></li>
+<li><a href="#contact" class="nav-link">Contact</a></li>
+</ul>
+  <div class="="hamburger">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+  </div>
+</nav>
+    </div>
+</header>
+
+<script>
+    const hamburger=document.querySelector('.hamburger');
+    const navMenu=document.querySelector('.nav-menu');
+
+    hamburger.addEventListener("click,mobileMenu");
+    function mobileMenu()
+    {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+
+    }
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click",closeMenu));
+
+    function closeMenu()
+    {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
+
+</script>
+<section class="home" id="home">
+    <div class="head_container">
+        <div class="box">
+            <div class="text">
+               <h1>WELCOME TO PARK MGM</h1>
+                <p></p>
+                    <button>MORE INFO</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="beach.jpg" class="slide">
+        </div>
+        <div class="image_item">
+            <img src="beach.jpg" alt="" class="slide active" onclick="img('beach.jpg')">
+            <img src="valeriia-bugaiova-_pPHgeHz1uk-unsplash.jpg" alt="" class="slide" onclick="img('valeriia-bugaiova-_pPHgeHz1uk-unsplash.jpg')">
+            <img src="roberto-nickson-rEJxpBskj3Q-unsplash.jpg" alt="" class="slide " onclick="img('roberto-nickson-rEJxpBskj3Q-unsplash.jpg')">
+            <img src="alev-takil-lw3Lqe2K7xc-unsplash.jpg" alt="" class="slide " onclick="img('alev-takil-lw3Lqe2K7xc-unsplash.jpg')">
+        </div>
+    </div>
+
+</section>
+<script>
+    function img(anything){
+        document.querySelector('.slide').src=anything;
+    }
+    function change(change){
+        const line = document.querySelector('.image');
+        line.style.background = change;
+    }
+</script>
+
+
+<section class="book">
+ <div class="container flex">
+    <div class="input grid">
+        <div class="box">
+            <label>Check-in:</label><br>
+            <input type="date" placeholder="Check-in-Date">
+        </div>
+        <div class="box">
+            <label>Check-out:</label><br>
+            <input type="date" placeholder="Check-out-Date">
+        </div>
+        <div class="box">
+            <label>Adults:</label> <br>
+            <input type="number" placeholder="0">
+        </div>
+        <div class="box">
+            <label>Children:</label> <br>
+            <input type="number" placeholder="0">
+        </div>
+    </div>
+    <div class="search">
+        <input type="submit" value="SEARCH">
+    </div>
+ </div>
+</section>
+<section class="about top" id="about">
+    <div class="container flex">
+        <div class="left">
+            <div class="img">
+                <img src="ameer-basheer-s03YaiW2Q9U-unsplash.jpg" alt="" class="image1">
+                <img src="keegan-checks-_MCYOr2RVFE-unsplash.jpg" alt="" class="image2">
+            </div>
+        </div>
+        <div class="right">
+            <div class="heading">
+                <h5>WELCOME TO PARK MGM GROUP OF HOTELS</h5>
+                <h2>THE PARADISE OF LUXURY</h2>
+                <p>Welcome to a world of unparalleled luxury, where your every desire is not only met but anticipated. Nestled in the heart of the iconic Las Vegas Strip, Park MGM hotels redefine the art of hospitality. Whether you seek the thrill of the casino, the serenity of a spa, or the finest culinary experiences, Park MGM offers an escape into a realm where elegance and excitement converge. Join us as we embark on a journey of sophistication, entertainment, and the unmistakable allure of Las Vegas. Welcome to Park MGM, where your every moment is designed to leave a lasting impression.
+                </p>
+                <p>Discover a place where sophistication meets the vibrant energy of the Las Vegas Strip. Park MGM Hotels invite you to experience a world where modern design, world-class entertainment, and personalized service come together in perfect harmony.</p>
+                <button class="btn1">READ MORE</button>
+                </div>
+        </div>
+    </div>
+
+</section>
+<section class="wrapper top" style="background-image: url('bundo-kim-ur2zmbseUIA-unsplash.jpg');">
+    <div class="container">
+        <div class="text">
+            <h2>OUR AMMENITIES</h2>
+            <p>The Park MGM is a renowned destination that caters to the desires and comforts of its guests in a truly exceptional manner. From the moment you step foot on the property, you are enveloped in a world of unparalleled amenities. The Park MGM boasts a sprawling, pristine beach with cabana service, where you can bask in the sun or enjoy a refreshing dip in the crystal-clear waters. </p>
+        <div class="content">
+            <div class="box flex">
+                <i class="fas fa-swimmer"></i>
+                <span>Swimming pool</span>
+            </div>
+            <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>Gym</span>
+            </div>
+            <div class="box flex">
+            <i class="fas fa-wifi"></i>
+            <span>Free WI-FI</span>
+            </div>
+            <div class="box flex">
+            <i class="fas fa-microphone"></i>
+            <span>Kareoke</span>
+            </div>
+            <div class="box flex">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>beach access</span>
+            </div>
+            <div class="box flex">
+            <i class="fas fa-mug-hot"></i>
+            <span>Complementary breakfast</span>
+            </div>
+            <div class="box flex">
+            <i class="fas fa-taxi"></i>
+            <span>Cab service</span>
+            </div>
+            <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span>Spa</span>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</section>
+    <section class="room" id="room">
+        <div class="container">
+            <div class="heading_top flex1">
+                <div class="heading">
+                    <h5>TAKING COMFORT TO A WHOLE NEW LEVEL</h5>
+                    <h2>Rooms and Suites</h2>
+                </div>
+                <div class="button">
+                    <button class="btn1">VIEW ALL</button>
+                </div>
+            </div>
+            <div class="content grid">
+                <div class="box">
+                    <div class="img">
+                        <img src="francesca-tosolini-tHkJAMcO3QE-unsplash.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>DELUXE ROOMS</h3>
+                        <p><span>₹</span>7000<span>/per night</span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <img src="apartment-1822409_640.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>PREMIUM ROOMS</h3>
+                        <p><span>₹</span>4500<span>/per night</span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <img src="visualsofdana-T5pL6ciEn-I-unsplash (1).jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>BASE ROOMS</h3>
+                        <p><span>₹</span>3000<span>/per night</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper wrapper2 top" style="background-image: url('ameer-basheer-s03YaiW2Q9U-unsplash.jpg');">
+        <div class="container">
+            <div class="text">
+                <div  class="heading2">
+                <h5>"Park MGM: Urban Elegance Redefined"</h5>
+                <h2> THIS Urban OASIS  PROVIDES UNPARALLELED EXPERIENCE</h2>
+            </div>
+            <div class="para">
+                <p>"Transformed into a magnificent beachfront resort, Park MGM captures the essence of coastal luxury and relaxation. Nestled along pristine shores, this idyllic escape offers a harmonious blend of sun-kissed beaches, crystal-clear waters, and lush tropical landscapes. Whether you're sipping cocktails by the pool, indulging in spa treatments with an ocean view, or simply strolling along the sandy shoreline, Park MGM as a beach resort promises an unparalleled retreat where every moment is a celebration of natural beauty and tranquility."</p>
+            <div class="box flex">
+                <div class="img">
+                    <img src="landscape-4659922_1280.jpg" alt="">
+                </div>
+                <div class="name">
+                    <h5>SAANVI SANJAY</h5>
+                    <h5>MIAMI</h5>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="restaurants top" id="restaurant">
+        <div class="container flex">
+            <div class="left">
+                <img src="breakfast-2649620_640.jpg" alt="" width="500" height="500">
+            </div>
+            <div class="right">
+                <div class="text">
+                    <h2>OUR RESTAURANTS</h2>
+                    <p>Park MGM boasts a collection of wonderful restaurants that cater to the most discerning of palates. Each dining establishment is a culinary journey in itself, offering a diverse array of flavors and experiences. From the sizzling steaks and fine wines at our steakhouse, to the vibrant and exotic dishes served at our international bistro, there's a dining adventure to suit every taste. Guests can savor farm-to-table freshness at our organic cafe or indulge in decadent desserts at our artisanal patisserie.</p>
+                </div>
+                <div class="accordionWrapper">
+                    <div class="accordionItem open">
+                        <h2 class="accordionIheading">Italian Kitchen</h2>
+                        <div class="accordionItemContent">
+                            <p>"Transport your taste buds to the heart of Italy at Park MGM's Italian restaurant, where the essence of Italian cuisine comes to life in every bite. With a menu inspired by generations of tradition, our Italian restaurant invites you to savor the authentic flavors of the Mediterranean. From the rich, velvety sauces of our pasta dishes to the wood-fired, Neapolitan-style pizzas that emerge from our ovens, every dish is a symphony of fresh ingredients and bold flavors.</p>
+                        </div>
+                    </div>
+                    <div class="accordionItem close">
+                        <h2 class="accordionIheading">Mexican Kitchen</h2>
+                        <div class="accordionItemContent">
+                           <p>Indulge in a feast of Mexican delights, including tacos, enchiladas, tamales, guacamole, and more. Our skilled chefs meticulously craft each dish using fresh and locally sourced ingredients, as well as traditional recipes that have been passed down through generations. You'll find a wide variety of options, from street-style tacos bursting with flavor to hearty mole dishes that are a symphony of tastes.</p>
+                        </div>
+                    </div>
+                    <div class="accordionItem close">
+                        <h2 class="accordionIheading">Indian Kitchen</h2>
+                        <div class="accordionItemContent">
+                            <p>Savor a delectable array of dishes that include classic curries, tandoori delights, biryanis, and a variety of vegetarian and non-vegetarian options. Our experienced chefs use the finest ingredients and authentic spices to create a dining experience that captures the essence of Indian cuisine. Whether you're a fan of butter chicken, seekh kebabs, or vegetarian delights like paneer tikka, we have something to please every palate.</p>
+                        </div>
+                    </div>
+                    <div class="accordionItem close">
+                        <h2 class="accordionIheading">Asian Kitchen</h2>
+                        <div class="accordionItemContent">
+                            <p>Our chefs are dedicated to using the finest ingredients and traditional cooking techniques to ensure that every dish is a masterpiece. The restaurant's ambiance is designed to create a harmonious blend of contemporary sophistication and Asian culture, providing a serene and inviting setting for your dining pleasure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <script>
+            var accItem = document.getElementsByClassName('accordionItem');
+var accHD = document.getElementsByClassName('accordionIheading');
+
+for (var i = 0; i < accHD.length; i++) {
+    accHD[i].addEventListener('click', toggleItem, false);
+}
+
+function toggleItem() {
+    var itemClass = this.parentNode.className;
+
+    for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+    }
+
+    if (itemClass === 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+    } else {
+        this.parentNode.className = 'accordionItem close';
+    }
+}
+        </script>
+           <style>
+               .image-grid {
+                   display: grid;
+                   grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
+                   gap: 10px; /* Adjust the gap between images as needed */
+               }
+       
+               .image-grid img {
+                   max-width: 100%;
+                   height: auto;
+                   display: block;
+                   
+               }
+           </style>
+      
+           <section class="gallery top" id="gallery">
+               <div class="container">
+                   <div class="heading_top flex1">
+                       <div class="heading3">
+                           <h5>EXPERIENCE LUXURY WITH US</h5>
+                           <h2>Premium relaxation spots within the resort</h2>
+                       </div>
+                       <div class="button2">
+                           <button class="btn1">VIEW LOBBY</button>
+                       </div>
+                   </div>
+                   <div class="image-grid">
+                       <img src="sunset-962156_640.jpg" alt="">
+                       <img src="furniture-3804530_640.jpg" alt="">
+                       <img src="rune-enstad-qeuJczNo54w-unsplash.jpg" alt="">
+                       <img src="hotel-389256_640.jpg" alt="">
+                   </div>
+               </div>
+           </section>
+           <section class="map top">
+            <div class="button3">
+                <button class="btn1">VIEW LOCATION</button>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15323.965057491134!2d74.83906736204938!3d12.876008428036254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1698067417892!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </section>
+
+           <footer>
+            <div  class="container grid top">
+                <div class="box">
+                    <h5>NEED HELP?</h5>
+                    <p>Welcome to MGM Resorts' Park MGM! Our help desk is here to assist you with any questions or concerns you may have. Whether you're looking for information about the park, need assistance with reservations, or have any other inquiries, we're here to help. Feel free to ask us about our amenities, dining options, event schedules, and more.</p>
+                    <p>Accepted payment methods</p>
+                    <div class="payment grid">
+                     <img src="https://cdn.visa.com/v2/assets/images/logos/visa/blue/logo.png" alt="">
+                     <img src="https://www.mastercard.co.in/content/dam/public/mastercardcom/in/en/logos/mc-logo-52.svg" alt="">
+                     <img src="https://www.axisbank.com/assets/images/logo-white.png" alt="">
+                     <img src="https://pay.google.com/about/business/static/images/logos/logo-gp3.svg" alt="">
+                    </div>
+                        </div>
+                        <div class="box">
+                            <h4>Recent News</h4>
+                            <ul>
+                                <li>Fresh seafood delights</li>
+                                   <li>Kayaking adventures .</li> 
+                                   <li> Beach bonfires .</li> 
+                                    <li> Starlit strolls.</li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <h4> For Customer</h4>
+                            <ul>
+                                <li>Help and Support</li>
+                                   <li>About MGM Resorts and Hotels</li> 
+                                   <li> Corporate Accounts</li> 
+                                    <li> Report an Issue</li>
+                                    <li>Terms and Conditions</li>
+
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <h4>Contact Us</h4>
+                            <ul>
+                          <li>5263 Main Street,Miami, USA 2411</li>
+                          <li><i class="fas fa-envelope"></i>demoexample@gmail.com</li>
+                          <li><i class="fas fa-phone"></i>4678899998</li>
+                          <li><i class="fas fa-phone"></i>0998997665</li> 
+                          <li><i class="fas fa-comment"></i>23/9 CUstomer Services</li>
+
+                            </ul>
+                        </div>
+            </div>
+
+           </footer>
+</body>
+</html>
+
+
+
+
+
